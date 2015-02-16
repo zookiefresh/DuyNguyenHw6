@@ -51,6 +51,6 @@ public class BankAccount {
     }
     
     private void displayBalance(){
-        System.out.println(cust.getName() + ", " + balance + "\n");
+        System.out.println(cust.getName() + ", accn#: " + accountNumber + ", Balance " + balance + "\n");
     } 
 }
