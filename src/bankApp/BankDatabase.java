@@ -11,4 +11,24 @@ package bankApp;
  */
 public class BankDatabase {
     
+    BankDatabase(){
+        
+    }
+    
+    void createCheckingAccount(String customerName, String ssn, float deposit){
+        
+    }
+    
+    void createSavingAccount(String customerName, String ssn, float deposit){
+        
+    }
+    
+    void print(){
+        
+    }
+    
+    void applyInterest(){
+        
+    }    
+    
 }
