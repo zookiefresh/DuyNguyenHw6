@@ -24,28 +24,37 @@ public class BankDatabase {
     }
     
     void createCheckingAccount(String customerName, String ssn, float deposit){                
-        String[] name = customerName.split(" ");        
-        numAccounts = numAccounts + 1;
-        allAccounts[numAccounts - 1] = new CheckingAccount(name[0], 
-                name[1], ssn, deposit);        
+        String[] name = customerName.split(" ");
+        if(name.length == 2){           
+            allAccounts[numAccounts] = new CheckingAccount(name[0], 
+                    name[1], ssn, deposit);             
+             numAccounts++;
+        }
+        else{
+            System.out.println("Invalid name");
+        }
     }
     
     void createSavingAccount(String customerName, String ssn, float deposit){
-        String[] name = customerName.split(" ");        
-        numAccounts = numAccounts + 1;
-        allAccounts[numAccounts] = new SavingsAccount(name[0], 
+        String[] name = customerName.split(" "); 
+        if(name.length == 2){       
+            allAccounts[numAccounts] = new SavingsAccount(name[0], 
                 name[1], ssn, deposit);                
+            numAccounts++;
+        }
     }
     
     void print(){
-        for(int i = 0 ; i <= numAccounts; i++){
-            allAccounts[i].checkBalance();
+        for(int i = 0 ; i < numAccounts; i++){
+            allAccounts[i].checkBalance(); 
+            // Not considered polymorphic
         }
     }
     
     void applyInterest(){
-        for(int i = 0 ; i <= numAccounts; i++){
-            allAccounts[i].applyInterest();
+        for(int i = 0 ; i < numAccounts; i++){
+            allAccounts[i].applyInterest(); 
+            // Polymorphic behavior because overriden in Checking account
         }
     }    
 }
