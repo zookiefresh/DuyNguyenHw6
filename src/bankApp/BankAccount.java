@@ -56,4 +56,27 @@ public class BankAccount {
         System.out.println(cust.getName() + ", accn#: " 
                 + accountNumber + ", Balance " + balance + "\n");
     } 
+    
+    @Override
+    public String toString(){        
+        return cust.getName() + ", accn#: " + accountNumber 
+                + ", Balance " + balance + "\n";
+    }
+    
+    @Override
+    public boolean equals(Object accnt){
+        if(accnt instanceof BankAccount){
+            BankAccount b = (BankAccount) accnt;
+            if (accountNumber != b.accountNumber){
+                return false;   
+            }
+            if (!cust.getName().equals(b.cust.getName())){
+                return false;
+            }            
+            return true;
+        }
+        {
+            return false;
+        }
+    }
 }

@@ -46,8 +46,15 @@ public class BankDatabase {
     
     void print(){
         for(int i = 0 ; i < numAccounts; i++){
-            allAccounts[i].checkBalance(); 
+            // allAccounts[i].checkBalance(); 
             // Not considered polymorphic
+          
+            // TODO - Object class override toString
+            System.out.println(allAccounts[i]);
+            // What is the advantage?
+            // Makes it easier for the user. One less method the user needs 
+            // to know -- Encapsulation! 
+            // Hide the complexity so that the user doesn't need to know            
         }
     }
     
