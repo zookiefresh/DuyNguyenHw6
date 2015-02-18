@@ -64,4 +64,13 @@ public class BankDatabase {
             // Polymorphic behavior because overriden in Checking account
         }
     }    
+    
+    boolean exists(BankAccount accnt){
+        for (int i=0; i < numAccounts; i++){
+            if(allAccounts[i].equals(accnt)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

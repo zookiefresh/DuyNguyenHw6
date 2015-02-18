@@ -16,8 +16,16 @@ public class BankApp {
        acctDatabase.createCheckingAccount("Alin Parker", "123-45-6789", 20000.0f);
        acctDatabase.createSavingAccount("Mary Jones", "987-65-4321", 15000.0f);
        acctDatabase.createSavingAccount("John Smith", "1233-45-6789", 12000.0f);
-       acctDatabase.print();
-       acctDatabase.applyInterest();
-       acctDatabase.print();      
+       //acctDatabase.print();
+       //acctDatabase.applyInterest();
+       //acctDatabase.print();      
+       
+       BankAccount Alin = new CheckingAccount("Alin", "Parker", "123-45-6789", 20000.0f);
+       if (acctDatabase.exists(Alin)){
+           System.out.println("CACA");
+       }
+       else{
+           System.out.println("CRAP");
+       }
     }    
 }

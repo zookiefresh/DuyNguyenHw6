@@ -66,10 +66,7 @@ public class BankAccount {
     @Override
     public boolean equals(Object accnt){
         if(accnt instanceof BankAccount){
-            BankAccount b = (BankAccount) accnt;
-            if (accountNumber != b.accountNumber){
-                return false;   
-            }
+            BankAccount b = (BankAccount) accnt;            
             if (!cust.getName().equals(b.cust.getName())){
                 return false;
             }            
